@@ -72,7 +72,9 @@ h1, h2, h3, h4, h5 {
 
 .container {
 	max-width: 876px;
-	margin: 0 auto;
+    margin: 0 auto;
+    padding: 3%;
+    border: orang solid 2px;
 }
 
 /* header */
@@ -160,7 +162,7 @@ footer {
 .started button {
 	background-color: white;
 	border: black solid 1px;
-	width: 100px;
+	width: 150px;
 	white-space: nowrap;
 	text-align: center;
 	padding: 2% 0;
@@ -327,29 +329,31 @@ footer {
     .container { 
         display:flex;
         flex-direction: column;
+        padding: 0;
     }
     header {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        width: 100%;
     }
     nav {
         display:flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        border-top: black solid 1px;
     }
     nav a {
-        border: black solid 1px;
+        border-bottom: black solid 1px;
         width: 100%;
+        padding: 5%;
     }
-    body {
+    .index {
         padding: 3%;
     }
-    .started {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    section {
+        margin: 3% 0;
     }
     .startedtext {
         display: flex;
@@ -362,30 +366,35 @@ footer {
     .two {
         display:flex;
         flex-direction: column;
-        align-items: center;
+    }
+    .two div {
+        width: 100%;
+        margin: 5% 0;
+    }
+    .flatimg {
+        margin: 0;
     }
     .three {
         display:flex;
         flex-direction: column;
-        align-items: center;
+    }
+    .three div {
+        width: 100%;
+        margin: 7% 0;
     }
 }
 
 @media (max-width: 800px){
-    .container {
-        padding: 3%;
-    }
-    
+
     header {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        padding: 0;
     }
     
     nav{
         width: 100%;
-        margin: 2% 0;
+        margin: 2%;
     }
     
     .logo{
