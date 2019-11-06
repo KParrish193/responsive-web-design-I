@@ -1,3 +1,414 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* --all page elements-- */
+/* page container*/
+
+.container {
+	max-width: 876px;
+    margin: 0 auto;
+    padding: 3%;
+    border: orang solid 2px;
+}
+
+/* header */
+header { 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 2%;
+}
+
+nav {
+	color: lightslategrey;
+	width: 62.5%;
+	display: flex; 
+	justify-content: space-between;
+}
+
+nav a:link, nav a:visited {
+	color: lightslategrey;
+}
+
+.logo {
+	 width: 30%;
+	 margin: 0;
+	}
+
+nav a { 
+	text-align: center;
+}
+
+/* etc */
+
+section {
+	padding: 4% 0;
+}
+
+img {
+	object-fit: cover;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 { 
+	text-align: center;
+	font-size: 85px;
+}
+
+h2 {
+	font-size: 25px;
+   }
+
+/* footer */
+
+.copyright {
+	text-align: center;
+}
+
+footer {
+	padding: 5%;
+}
+
+
+/* --index styling-- */
+/* main section, (classes = started, button, circle) */
+
+.started {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.startedtext{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 45%;
+}
+
+.started button {
+	background-color: white;
+	border: black solid 1px;
+	width: 150px;
+	white-space: nowrap;
+	text-align: center;
+	padding: 2% 0;
+	letter-spacing: 1.5;
+
+}
+
+.circle {
+	display: flex;
+	justify-content: center;
+	width: 45%;
+}
+
+/* section 2 (class = two) */
+
+.two { 
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	border-top-color: black;
+	border-top-style: solid;
+	border-top-width: 2px;
+	padding-bottom: 0;
+}
+
+.two div {
+    width: 48%;
+}
+/* image divider section (class = flatimg)*/
+
+.flatimg div { 
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+    padding: 0;
+}
+
+.flatimg img {
+    max-width: 100%;
+    height: auto
+}
+
+/* section 3 (class = three) */
+
+.three {
+	display: flex;
+	justify-content: space-between;
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	padding-top: 0;
+}
+
+.three div {
+    width: 31%;
+}
+/* contact section (class = contact) */
+
+.contact a:link, .contact a:visited {
+	color:black;
+}
+
+.contact {
+	width: 50%;
+}
+
+
+/* --services page styling-- */
+
+/* services header */
+
+.servicesheader {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+  	border-bottom-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.servicesheader div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.servicestext {
+	display: flex;
+	flex-direction: column;
+	padding-top: 3%;
+}
+
+.services-header-img {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+/* box section */
+
+.boxes {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-flow: row wrap;
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.boxes div {
+	background-color: whitesmoke;
+	border: solid black 1px;
+	width: 45%;
+	margin: 2% 0;
+	padding: 2%
+}
+
+.boxes p {
+	padding-bottom: 2%;
+}
+
+.learnbutton {
+	text-align: center;
+	background-color: white;
+	border: black solid 1px;
+	border-radius: 8%;
+	padding: 2% 8%;
+}
+
+/* facts section */
+.facts {
+	display: flex;
+	justify-content: space-between;
+}
+
+.facts div {
+	width: 45%;
+}
+.factsimg div {
+	width: 45%;
+	display: flex;
+	justify-content: center;
+}
+
+.services-info-img{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.facts ul {
+	line-height: 2;
+	margin: 0 0 0 15px;
+}
+
+
+/* Responsive Design Styling*/
+
+@media (max-width: 500px){
+    .container { 
+        display:flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+    }
+    nav {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border-top: black solid 1px;
+    }
+    nav a {
+        border-bottom: black solid 1px;
+        width: 100%;
+        padding: 5%;
+    }
+    .index {
+        padding: 3%;
+    }
+    section {
+        margin: 3% 0;
+    }
+    .startedtext {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .circle {
+        display: none; 
+    }
+    .two {
+        display:flex;
+        flex-direction: column;
+    }
+    .two div {
+        width: 100%;
+        margin: 5% 0;
+    }
+    .flatimg {
+        margin: 0;
+    }
+    .three {
+        display:flex;
+        flex-direction: column;
+    }
+    .three div {
+        width: 100%;
+        margin: 7% 0;
+    }
+}
+
+@media (max-width: 800px){
+
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    nav{
+        width: 100%;
+        margin: 2%;
+    }
+    
+    .logo{
+        margin: 3% 0;
+    }
+    
+    .started {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 3% 0;
+    }
+    
+    .circle {
+        display: none;
+    }
+}
